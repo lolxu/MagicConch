@@ -8,33 +8,17 @@ public class RopeGenerator : MonoBehaviour
 {
     public Rigidbody2D m_anchorObject;
     
-    [Tooltip("The rope asset that is used to connect to this object")]
-    public GameObject m_myRopePrefab;
-    
-    [Tooltip("The rope asset that is using to connect to other objects")]
     public GameObject m_usingRopePrefab;
-    public List<GameObject> m_next = new List<GameObject>();
+    public GameObject m_connectTo;
     public GameObject m_prev;
-
-    private GameObject m_rope;
 
     private void Start()
     {
-        m_rope = GameObject.FindGameObjectWithTag("Rope");
+        GenerateRope(m_connectTo);
     }
 
     public void GenerateRope(GameObject connectTo)
     {
-        if (connectTo.GetComponent<RelativeJoint2D>() != null)
-        {
-            Vector2 offset = transform.position - connectTo.transform.position;
-            RelativeJoint2D joint = connectTo.GetComponent<RelativeJoint2D>();
-            joint.enabled = true;
-            joint.connectedBody = m_anchorObject;
-            joint.autoConfigureOffset = true;
-            // joint.linearOffset = offset;
-        }
-        
         CreateVisualRope(connectTo);
     }
 
@@ -48,7 +32,7 @@ public class RopeGenerator : MonoBehaviour
             for (int i = 0; i < length; i++)
             {
                 // Instantiating a rope link and randomizing scale
-                GameObject link = Instantiate(m_usingRopePrefab, m_rope.transform, true);
+                GameObject link = Instantiate(m_usingRopePrefab, null, true);
                 link.transform.position = transform.position;
                 float randScale = Random.Range(0.5f, 0.5f);
                 link.transform.localScale = new Vector3(randScale, randScale, randScale);
@@ -75,6 +59,7 @@ public class RopeGenerator : MonoBehaviour
                 }
                 else
                 {
+                    joint.connectedAnchor = new Vector2(0.0f, -0.25f);
                     prevRB = link.GetComponent<Rigidbody2D>();
                 }
             
