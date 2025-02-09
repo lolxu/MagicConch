@@ -72,5 +72,7 @@ public class CSVReaderEditor : Editor
         {
             asset.m_dialogues.Add(dialogue);
         }
+        
+        EditorUtility.SetDirty(asset);
     }
 }

@@ -12,4 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abbe1419a37ff7843897257129b29db8, type: 3}
   m_Name: Conch_CSV_T2
   m_EditorClassIdentifier: 
-  m_dialogues: []
+  m_dialogues:
+  - "\u5178"
+  - "\u4E50"
+  - "\u65E0"
+  - "\U0001F251"
+  - 1
+  - 0
+  - "\u5475\u5475"
+  - "\u95EE\u95EEGPT\u600E\u4E48\u8BF4"
+  - "\u60F3\u60F3\u4E01\u771F\u4F1A\u600E\u4E48\u505A"
+  - "\u4F60\u793C\u8C8C\u5417"
+  - "\u554A\u5BF9\u5BF9\u5BF9"
+  - "\u4F60\u6709\u6BDB\u75C5\u5417"
+  - "\u51FA\u53D1"
+  - "\u51B2\u950B"
+  - "\u6765\u8D22"
+  - "\u5408\u7406"
+  - GG
+  - "\u4EC0\u4E48?"
+  - "\u5173\u6211\u5C41\u4E8B"
+  - "\u60F3\u90FD\u522B\u60F3"
+  - "\u8FD9\u80FD\u8BF4\u5417"
+  - "\u8BE5\u559D\u9152\u4E86"
+  - "\u6765\u8D22 \u6765\u554A!"
+  - "\u6211\u77E5\u9053\u4F60\u5F88\u6025 \u4F46\u4F60\u5148\u522B\u6025"
+  - "\u522B\u6025"
+  - "\u6025\u4E86"
+  - "\u5C0F\u4E11"
+  - "\u4F60\u542C\u542C\u81EA\u5DF1\u5728\u8BF4\u4EC0\u4E48"
+  - ennnnnnn
+  - 2 5 0 = 250
+  - "\u4E0A\u6B21\u542C\u5230\u8FD9\u79CD\u8BDD\u8FD8\u662F\u4E0A\u6B21"
+  - Awwwww~
+  - Ewwwww!

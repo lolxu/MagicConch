@@ -12,4 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abbe1419a37ff7843897257129b29db8, type: 3}
   m_Name: Conch_CSV_T3
   m_EditorClassIdentifier: 
-  m_dialogues: []
+  m_dialogues:
+  - "\u4F60\u4ED6\u5988\u600E\u4E48B\u8BDD\u8FD9\u4E48\u591A?"
+  - "\u4F60\u53EF\u4EE5\u5B89\u9759\u4F1A\u5417?"
+  - "\u8BF4\u5F97\u5F88\u597D \u4F46\u4E0B\u6B21\u522B\u8BF4\u4E86"
+  - "\u4F60\u53EF\u4EE5\u4E0D\u8981\u5F3A\u5978\u6211\u7684\u8033\u6735\u561B?"
+  - "\u4F60\u8BE5\u5237\u7259\u4E86"
+  - "\u4F60\u5634\u597D\u81ED"
+  - "\u6211\u662F\u4F60\u7239"
+  - "\u8BE5\u5C3F\u5C3F\u4E86"
+  - "\u6EDA\u554A\uFF01"
