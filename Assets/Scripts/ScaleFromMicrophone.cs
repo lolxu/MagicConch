@@ -42,7 +42,7 @@ public class ScaleFromMicrophone : MonoBehaviour
         if (m_canScale)
         {
             float loudness = m_detector.GetLoudnessFromMicrophone() * m_loudnessSensibility;
-
+            Debug.Log(loudness);
             if (loudness < m_threshold)
             {
                 loudness = 0.0f;

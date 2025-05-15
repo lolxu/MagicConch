@@ -18,6 +18,7 @@ public class AudioLoudness : MonoBehaviour
     private void MicrophoneToAudioClip()
     {
         string microphoneName = Microphone.devices[0];
+        Debug.Log(microphoneName);
         m_micClip = Microphone.Start(microphoneName, true, 20, AudioSettings.outputSampleRate);
     }
 
