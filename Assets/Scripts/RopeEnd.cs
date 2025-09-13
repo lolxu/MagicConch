@@ -15,17 +15,17 @@ public class RopeEnd : MonoBehaviour
         m_RB = GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (m_conch != null)
-        {
-            Vector3 toTarget = (m_conch.transform.position - transform.position).normalized;
-            Quaternion targetQuat = Quaternion.LookRotation(toTarget, Vector3.forward);
-            Vector3 tmp = targetQuat.eulerAngles;
-            tmp.z += 30.0f;
-            targetQuat = Quaternion.Euler(tmp);
-            Quaternion rotQuat = Quaternion.Slerp(transform.rotation, targetQuat, Time.deltaTime * m_rotateSpeed);
-            m_RB.MoveRotation(rotQuat);
-        }
+        // if (m_conch != null)
+        // {
+        //     Vector3 toTarget = (m_conch.transform.position - transform.position).normalized;
+        //     Quaternion targetQuat = Quaternion.LookRotation(toTarget, Vector3.forward);
+        //     Vector3 tmp = targetQuat.eulerAngles;
+        //     tmp.z += 30.0f;
+        //     targetQuat = Quaternion.Euler(tmp);
+        //     Quaternion rotQuat = Quaternion.Slerp(transform.rotation, targetQuat, Time.deltaTime * m_rotateSpeed);
+        //     m_RB.MoveRotation(rotQuat);
+        // }
     }
 }

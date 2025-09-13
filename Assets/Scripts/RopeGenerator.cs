@@ -43,22 +43,20 @@ public class RopeGenerator : MonoBehaviour
             {
                 // Instantiating a rope link and randomizing scale
                 GameObject link = Instantiate(m_usingRopePrefab, null, true);
-                link.transform.position = transform.position;
+                link.transform.position = transform.position + new Vector3(0.1f, 0.1f, 0.0f);
             
                 HingeJoint2D joint = link.GetComponent<HingeJoint2D>();
-                
                 joint.connectedBody = prevRB;
-                joint.autoConfigureConnectedAnchor = true;
             
                 // Determining the connection offset
                 // Making it randomized in the middle
                 if (i == 0)
                 {
+                    
                     joint.autoConfigureConnectedAnchor = false;
-                    joint.connectedAnchor = Vector2.zero;
+                    joint.connectedAnchor = new Vector2(0.0f, 0.0f);
                 }
-                
-                if (i == m_ropeLength - 1)
+                else if (i == m_ropeLength - 1)
                 {
                     joint.autoConfigureConnectedAnchor = false;
                     joint.connectedAnchor = Vector2.zero;
@@ -70,7 +68,9 @@ public class RopeGenerator : MonoBehaviour
                 }
                 else
                 {
+                    joint.autoConfigureConnectedAnchor = true;
                     prevRB = link.GetComponent<Rigidbody2D>();
+                    // link.GetComponent<SpriteRenderer>().enabled = false;
                 }
             
                 connectTo.GetComponent<RopeReceiver>().m_links.Add(link);

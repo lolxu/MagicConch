@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Messenger : MonoBehaviour
 {
-    [SerializeField] private TextMeshPro m_text;
+    [SerializeField] private TextMeshProUGUI m_text;
     [SerializeField] private float m_showDuration = 5.0f;    
     
     private void Start()
